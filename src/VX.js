@@ -2,10 +2,10 @@ import React from 'react';
 import { Group } from '@vx/group';
 import { Tree } from '@vx/hierarchy';
 import { LinkHorizontal } from '@vx/shape';
-import { hierarchy } from 'd3-hierarchy';
+import { hierarchy } from '../../Library/Caches/typescript/2.9/node_modules/@types/d3-hierarchy';
 import { LinearGradient } from '@vx/gradient';
 import Home from '@material-ui/icons/HomeOutlined';
-import { IconButton } from '../node_modules/@material-ui/core';
+import { IconButton } from '@material-ui/core';
 
 const raw = {
   "name": "T",
@@ -95,7 +95,7 @@ function Node({ node, events }) {
           fontFamily="Arial"
           textAnchor={"middle"}
           style={{ pointerEvents: "none" }}
-          fill={node.depth === 0 ? "#71248e" : node.children ? "white" : "#26deb0"}
+          fill={node.depth === 0 ? "#ff0000" : node.children ? "white" : "#26deb0"}
         >
           {node.data.name}
         </text>
